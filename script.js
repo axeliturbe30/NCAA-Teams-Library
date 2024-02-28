@@ -107,3 +107,32 @@ console.log(getTeamsInState("Michigan"))
 console.log(getTeamsInState("Michigan"))
 
 
+
+
+
+function getCollegeEnrollment(conference){
+    var total = 0;
+    
+    for (var i = 0; i < conferences.length; i++){
+            if(conferences[i].toLowerCase().includes(conference.toLowerCase())){
+                    total += (parseFloat(enrollments[i]));
+            }
+        }
+        if(total == 0){
+            return -1;
+        }
+            return total;
+        }
+
+    // console.log(getCollegeEnrollment("Mountain West"))
+    // console.log(getCollegeEnrollment("MAC"))
+    // console.log(getCollegeEnrollment("SEC"))
+    // console.log(getCollegeEnrollment("Sun Belt"))
+    // console.log(getCollegeEnrollment("Pac-12"))
+    // console.log(getCollegeEnrollment("Independent"))
+    // console.log(getCollegeEnrollment("Big 12"))
+    // console.log(getCollegeEnrollment("ACC"))
+    // console.log(getCollegeEnrollment("C-USA"))
+    // console.log(getCollegeEnrollment("American"))
+    // console.log(getCollegeEnrollment("FBS Independent"))
+    // console.log(getCollegeEnrollment("Big Ten"))
