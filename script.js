@@ -20,3 +20,5 @@ function getColumn(url, columnNumber){
          }
          return column;
       }
+
+      var url = ""
