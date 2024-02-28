@@ -61,3 +61,49 @@ function getTeamsInConference(conference){
     // console.log(getTeamsInConference("American"))
     // console.log(getTeamsInConference("FBS Independent"))
     // console.log(getTeamsInConference("Big Ten"))
+
+function getTeamsInState(state){
+    var matches = [];
+
+    for (var i = 0; i < states.length; i++){
+            if(states[i].toLowerCase().includes(state.toLowerCase())){
+                matches.push(universities[i]);
+            }
+    }
+    if(matches.length > 0){
+    
+        return matches;
+    }
+    else{
+        matches.push("The state does not exist");
+        return matches;
+    }
+    }
+
+console.log(getTeamsInState("Calorado"))
+console.log(getTeamsInState("Ohio"))
+console.log(getTeamsInState("Alabama"))
+console.log(getTeamsInState("North Carolina"))
+console.log(getTeamsInState("Arizona"))
+console.log(getTeamsInState("Arkansas"))
+console.log(getTeamsInState("New York"))
+console.log(getTeamsInState("Indiana"))
+console.log(getTeamsInState(Texas""))
+console.log(getTeamsInState("Idaho"))
+console.log(getTeamsInState("Massachusetts"))
+console.log(getTeamsInState("Utah"))
+console.log(getTeamsInState("California"))
+console.log(getTeamsInState("South Carolina"))
+console.log(getTeamsInState("Florida"))
+console.log(getTeamsInState("Georgia"))
+console.log(getTeamsInState("Hawai'i"))
+console.log(getTeamsInState("Illinois"))
+console.log(getTeamsInState("Michigan"))
+console.log(getTeamsInState("Michigan"))
+console.log(getTeamsInState("Michigan"))
+console.log(getTeamsInState("Michigan"))
+console.log(getTeamsInState("Michigan"))
+console.log(getTeamsInState("Michigan"))
+console.log(getTeamsInState("Michigan"))
+
+
