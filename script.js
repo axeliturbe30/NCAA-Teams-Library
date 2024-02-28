@@ -62,12 +62,12 @@ function getTeamsInConference(conference){
     // console.log(getTeamsInConference("FBS Independent"))
     // console.log(getTeamsInConference("Big Ten"))
 
-function getTeamsInState(state){
+function getTeamsInState(conference){
     var matches = [];
 
     for (var i = 0; i < states.length; i++){
-            if(states[i].toLowerCase().includes(state.toLowerCase())){
-                matches.push(universities[i]);
+            if(conferences[i].toLowerCase().includes(conference.toLowerCase())){
+                matches.push(states[i]);
             }
     }
     if(matches.length > 0){
@@ -75,37 +75,55 @@ function getTeamsInState(state){
         return matches;
     }
     else{
-        matches.push("The state does not exist");
+        matches.push("The conference does not exist");
+        return matches;
+    }
+    }
+    
+    // console.log(getTeamState("Mountain West"))
+    // console.log(getTeamState("MAC"))
+    // console.log(getTeamState("SEC"))
+    // console.log(getTeamState("Sun Belt"))
+    // console.log(getTeamState("Pac-12"))
+    // console.log(getTeamState("Independent"))
+    // console.log(getTeamState("Big 12"))
+    // console.log(getTeamState("ACC"))
+    // console.log(getTeamState("C-USA"))
+    // console.log(getTeamState("American"))
+    // console.log(getTeamState("FBS Independent"))
+    // console.log(getTeamState("Big Ten"))
+
+
+function getTeamsInCtiy(conference){
+    var matches = [];
+
+    for (var i = 0; i < cities.length; i++){
+            if(conferences[i].toLowerCase().includes(conference.toLowerCase())){
+                matches.push(city[i]);
+            }
+    }
+    if(matches.length > 0){
+    
+        return matches;
+    }
+    else{
+        matches.push("The confernce does not exist");
         return matches;
     }
     }
 
-console.log(getTeamsInState("Calorado"))
-console.log(getTeamsInState("Ohio"))
-console.log(getTeamsInState("Alabama"))
-console.log(getTeamsInState("North Carolina"))
-console.log(getTeamsInState("Arizona"))
-console.log(getTeamsInState("Arkansas"))
-console.log(getTeamsInState("New York"))
-console.log(getTeamsInState("Indiana"))
-console.log(getTeamsInState(Texas""))
-console.log(getTeamsInState("Idaho"))
-console.log(getTeamsInState("Massachusetts"))
-console.log(getTeamsInState("Utah"))
-console.log(getTeamsInState("California"))
-console.log(getTeamsInState("South Carolina"))
-console.log(getTeamsInState("Florida"))
-console.log(getTeamsInState("Georgia"))
-console.log(getTeamsInState("Hawai'i"))
-console.log(getTeamsInState("Illinois"))
-console.log(getTeamsInState("Michigan"))
-console.log(getTeamsInState("Michigan"))
-console.log(getTeamsInState("Michigan"))
-console.log(getTeamsInState("Michigan"))
-console.log(getTeamsInState("Michigan"))
-console.log(getTeamsInState("Michigan"))
-console.log(getTeamsInState("Michigan"))
-
+    // console.log(getTeamCity("Mountain West"))
+    // console.log(getTeamCity("MAC"))
+    // console.log(getTeamCity("SEC"))
+    // console.log(getTeamCity("Sun Belt"))
+    // console.log(getTeamCity("Pac-12"))
+    // console.log(getTeamCity("Independent"))
+    // console.log(getTeamCity("Big 12"))
+    // console.log(getTeamCity("ACC"))
+    // console.log(getTeamCity("C-USA"))
+    // console.log(getTeamCity("American"))
+    // console.log(getTeamCity("FBS Independent"))
+    // console.log(getTeamCity("Big Ten"))
 
 
 
