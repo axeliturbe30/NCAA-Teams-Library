@@ -136,3 +136,35 @@ function getCollegeEnrollment(conference){
     // console.log(getCollegeEnrollment("American"))
     // console.log(getCollegeEnrollment("FBS Independent"))
     // console.log(getCollegeEnrollment("Big Ten"))
+
+
+function getTeamNickname(conference){
+    var matches = [];
+
+    for (var i = 0; i < conferences.length; i++){
+            if(conferences[i].toLowerCase().includes(conference.toLowerCase())){
+                matches.push(nicknames[i]);
+            }
+    }
+    if(matches.length > 0){
+    
+        return matches;
+    }
+    else{
+        matches.push("The conference does not exist");
+        return matches;
+    }
+    }
+
+    // console.log(getTeamNickname("Mountain West"))
+    // console.log(getTeamNickname("MAC"))
+    // console.log(getTeamNickname("SEC"))
+    // console.log(getTeamNickname("Sun Belt"))
+    // console.log(getTeamNickname("Pac-12"))
+    // console.log(getTeamNickname("Independent"))
+    // console.log(getTeamNickname("Big 12"))
+    // console.log(getTeamNickname("ACC"))
+    // console.log(getTeamNickname("C-USA"))
+    // console.log(getTeamNickname("American"))
+    // console.log(getTeamNickname("FBS Independent"))
+    // console.log(getTeamNickname("Big Ten"))
