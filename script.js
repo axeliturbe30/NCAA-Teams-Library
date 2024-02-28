@@ -29,3 +29,35 @@ var url = "https://raw.githubusercontent.com/b-mcavoy/datasets/main/Sports/NCAA%
       var state = getColumn(url, 4)
       var enrollment = getColumn(url, 5)
       var conference = getColumn(url, 6)
+
+//prints teams in the same conference
+function getTeamsInConference(conference){
+    var matches = [];
+
+    for (var i = 0; i < conferences.length; i++){
+            if(conferences[i].toLowerCase().includes(conference.toLowerCase())){
+                matches.push(universities[i]);
+            }
+    }
+    if(matches.length > 0){
+    
+        return matches;
+    }
+    else{
+        matches.push("The conference does not exist");
+        return matches;
+    }
+    }
+
+    // console.log(getTeamsInConference("Mountain West"))
+    // console.log(getTeamsInConference("MAC"))
+    // console.log(getTeamsInConference("SEC"))
+    // console.log(getTeamsInConference("Sun Belt"))
+    // console.log(getTeamsInConference("Pac-12"))
+    // console.log(getTeamsInConference("Independent"))
+    // console.log(getTeamsInConference("Big 12"))
+    // console.log(getTeamsInConference("ACC"))
+    // console.log(getTeamsInConference("C-USA"))
+    // console.log(getTeamsInConference("American"))
+    // console.log(getTeamsInConference("FBS Independent"))
+    // console.log(getTeamsInConference("Big Ten"))
